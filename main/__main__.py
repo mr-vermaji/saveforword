@@ -17,7 +17,7 @@ for name in files:
 
 #Don't be a thief 
 print("Successfully deployed!")
-print("By official_virendraverma • VK_main_channel")
+print("By official_virendraverma • @official_virendraverma")
 
 if __name__ == "__main__":
     bot.run_until_disconnected()
