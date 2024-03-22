@@ -77,25 +77,3 @@ async def _batch(event):
             conv.cancel()
             batch.clear()
 
-async def run_batch(userbot, client, sender, link, _range):
-    for i in range(_range):
-        if i < 10000 and i > 1:
-            timer = 5
-        if not 't.me/c/' in link:
-            if i < 25:
-                timer = 5
-            else:
-                timer = 5
-        try: 
-            if not sender in batch:
-                await client.send_message(sender, "Batch completed.")
-                break
-        except Exception as e:
-            print(e)
-            await client.send_message(sender, "Batch completed.")
-            break
-            await get_bulk_msg(userbot, client, sender, link, i)
-        protection = await client.send_message(sender, f"Sleeping for `{timer}` seconds to avoid Floodwaits and Protect account!")
-        await asyncio.sleep(timer)
-        await protection.delete()
-            
